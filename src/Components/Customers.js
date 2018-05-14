@@ -44,6 +44,10 @@ class Customers extends Component {
         })
         .then(response => this.showCustomers())
         .catch(err => console.log(err))
+
+        toast.success("Added!", {
+            position: toast.POSITION.TOP_CENTER
+        });
     }
 
     // DELETES CUSTOMER
@@ -79,6 +83,10 @@ class Customers extends Component {
         })
         .then(response => this.showCustomers())
         .catch(err => console.error(err))
+
+        toast.success("Updated", {
+            position: toast.POSITION.TOP_CENTER
+        });
     }
 
     // ADDS TRAINING
@@ -90,6 +98,9 @@ class Customers extends Component {
             },
             body: JSON.stringify(newTraining)
         })
+        toast.success("Training Added!", {
+            position: toast.POSITION.TOP_CENTER
+        });
     }
 
     render() {
@@ -170,6 +181,7 @@ class Customers extends Component {
                 className="-striped-highlight"
                 filterable
                 />
+                 <ToastContainer autoClose={1500} />
             </div>
         );
     }
