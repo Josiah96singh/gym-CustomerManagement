@@ -98,7 +98,6 @@ class Customers extends Component {
                 <div className = "row">
                 <AddCustomers addCustomers={this.addCustomers} />
                 </div>
-                <h2>Customers</h2>
                 <ReactTable
                 data={this.state.customers}
                 columns = {[

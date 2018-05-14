@@ -14,17 +14,27 @@ class App extends Component {
       </header>
       <BrowserRouter>
       <div>
-        <Link to="/">Frontpage</Link>{' '}
-        <Link to="/customers">Customers</Link>{' '}
-        <Link to="/trainings">Trainings</Link>{' '}
-        <Link to="/calendar">Calendar</Link>{' '}
+      <ul class="nav justify-content-center">
+       <li class="nav-item">
+       <Link className="nav-link" to="/">Frontpage</Link>{' '}
+      </li>
+      <li class="nav-item">
+      <Link  className="nav-link" to="/customers">Customers</Link>{' '}
+      </li>
+      <li class="nav-item">
+      <Link className="nav-link" to="/trainings">Trainings</Link>{' '}
+     </li>
+     <li class="nav-item">
+     <Link className="nav-link" to="/calendar">Calendar</Link>{' '}
+     </li>
+    </ul>
         <Switch>
-          <Route exact path = "/" render={() => <h2>Frontpage</h2>} />
+          <Route exact path = "/" render={() => <h3>Welcome</h3>} />
           <Route path = "/customers" component={Customers} />
           <Route path = "/trainings" component={Trainings} />
           <Route path = "/calendar" component={Calendar} />
         </Switch>
-      </div>
+        </div>
       </BrowserRouter>
       </div>
   
