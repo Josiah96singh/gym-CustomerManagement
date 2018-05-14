@@ -6,6 +6,7 @@ import { confirmAlert } from 'react-confirm-alert';
 import SkyLight from 'react-skylight';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import AddTrainings from './AddTrainings';
+import moment from 'moment';
 
 class Trainings extends Component {
     constructor(props){
@@ -67,14 +68,8 @@ class Trainings extends Component {
                             {
                                 id: 'date',
                                 Header: "Date",
-                                accessor: d => {
-                                let date = new Date(d.date)
-                                let day = date.getDate();
-                                let month = date.getMonth() +1;
-                                let year = date.getFullYear();
-                                date = (new Date(year, month, day)).toISOString().split('T')[0]
-                                return date
-                                }
+                                accessor: "date",
+                                Cell:({value}) => (moment.utc(value).format('DD.MM.YYYY'))
                               },
                             {
                                 Header: "Duration",
