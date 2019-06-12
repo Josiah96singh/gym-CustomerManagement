@@ -14,7 +14,7 @@ Gym customer database made with React.
 2. React-Router
 3. Moment js
 
-#Upcoming Features
+# Upcoming Features
 
 1. Firebase Authentication
 2. Improved training views with customer info.
