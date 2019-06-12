@@ -8,10 +8,10 @@
 }
 
 .App-header {
-  background-color: #222;
   height: 90px;
   padding: 20px;
-  color: white;
+  color: black;
+  background-color: floralwhite;
 }
 
 .App-title {
@@ -22,7 +22,27 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.addbtn_Customer {
+  padding: 20px;
+}
+
+.nav_main ul {
+  background-color: antiquewhite;
+  font-weight: lighter;
+}
+
+.nav_main h3 {
+  padding: 30px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.calendar {
+  padding: 30px;
 }
